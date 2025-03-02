@@ -15,4 +15,11 @@
     <Folder Include="Implements\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Library\Maynghien.Common\Maynghien.Common.csproj" />
+    <ProjectReference Include="..\Mall.Commons\Mall.Commons.csproj" />
+    <ProjectReference Include="..\Mall.DTOs\Mall.DTOs.csproj" />
+    <ProjectReference Include="..\Mall.Models\Mall.Models.csproj" />
+  </ItemGroup>
+
 </Project>

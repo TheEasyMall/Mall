@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.13">
       <PrivateAssets>all</PrivateAssets>
@@ -20,7 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Setup\" />
+    <ProjectReference Include="..\..\..\..\Library\Maynghien.Common\Maynghien.Common.csproj" />
+    <ProjectReference Include="..\Mall.Commons\Mall.Commons.csproj" />
+    <ProjectReference Include="..\Mall.DTOs\Mall.DTOs.csproj" />
+    <ProjectReference Include="..\Mall.Models\Mall.Models.csproj" />
+    <ProjectReference Include="..\Mall.Services\Mall.Services.csproj" />
   </ItemGroup>
 
 </Project>

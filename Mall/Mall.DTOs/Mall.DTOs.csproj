@@ -17,4 +17,9 @@
     <Folder Include="Responses\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Library\Maynghien.Common\Maynghien.Common.csproj" />
+    <ProjectReference Include="..\Mall.Commons\Mall.Commons.csproj" />
+  </ItemGroup>
+
 </Project>
