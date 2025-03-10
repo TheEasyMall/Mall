@@ -1,0 +1,28 @@
+﻿@model Mall.DTOs.Auth.Requests.LogInRequest
+@{
+    ViewData["Title"] = "LogIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <p class="text-danger">@ViewBag.ErrorMessage</p>
+}
+
+<form method="post" class="mt-3">
+    <div class="mb-3">
+        <label>Email:</label>
+        <input type="email" asp-for="Email" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Password:</label>
+        <input type="password" asp-for="Password" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+<p class="mt-3">Chưa có tài khoản? <a href="@Url.Action("SignUp", "Authentications")">Đăng ký</a></p>

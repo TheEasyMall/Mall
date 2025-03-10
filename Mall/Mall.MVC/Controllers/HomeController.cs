@@ -1,20 +1,31 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Mall.MVC.Models;
+using Mall.Services.Interfaces;
 
 namespace Mall.MVC.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IAuthenticationService _authenticationService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, 
+        IAuthenticationService authenticationService)
     {
         _logger = logger;
+        _authenticationService = authenticationService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
+        var userInfo = await _authenticationService.GetInforAccount();
+        if (userInfo == null || !userInfo.IsSuccess || userInfo.Data == null)
+        {
+            return RedirectToAction("LogIn", "Authentications");
+        }
+
+        ViewData["UserEmail"] = userInfo.Data.Email;
         return View();
     }
 

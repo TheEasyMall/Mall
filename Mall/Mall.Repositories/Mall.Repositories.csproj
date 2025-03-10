@@ -11,11 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Implements\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\..\..\Library\Maynghien.Common\Maynghien.Common.csproj" />
     <ProjectReference Include="..\Mall.Commons\Mall.Commons.csproj" />
     <ProjectReference Include="..\Mall.DTOs\Mall.DTOs.csproj" />

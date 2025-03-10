@@ -11,8 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Auth\Responses\" />
-    <Folder Include="Auth\Requests\" />
     <Folder Include="Requests\" />
     <Folder Include="Responses\" />
   </ItemGroup>
